@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kenzie Mohammed Ebrahim | Data & Technology Portfolio</title>
+<meta name="description" content="Professional portfolio of Kenzie Mohammed Ebrahim — Data Analyst, Data Scientist, Python Developer, SQL & Power BI.">
+<style>
+:root{
+  --bg:#090a12; --panel:#111321; --panel2:#15182a; --text:#f7f7fb; --muted:#a8adbf;
+  --purple:#8b5cf6; --pink:#ec4899; --cyan:#22d3ee; --line:rgba(255,255,255,.09);
+  --grad:linear-gradient(135deg,#8b5cf6,#ec4899);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:
+radial-gradient(circle at 15% 10%,rgba(139,92,246,.17),transparent 28%),
+radial-gradient(circle at 85% 15%,rgba(236,72,153,.13),transparent 25%),var(--bg);
+color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(9,10,18,.75);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.navin{height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.2rem;font-weight:800;letter-spacing:.5px}.logo span{color:var(--pink)}
+.navlinks{display:flex;gap:24px;font-size:.9rem;color:var(--muted)}
+.navlinks a:hover{color:#fff}
+.hero{min-height:calc(100vh - 70px);display:grid;place-items:center;padding:80px 0}
+.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:50px;align-items:center}
+.badge{display:inline-flex;padding:7px 13px;border:1px solid rgba(139,92,246,.35);background:rgba(139,92,246,.09);border-radius:999px;color:#d8caff;font-size:.82rem;margin-bottom:20px}
+h1{font-size:clamp(3rem,7vw,5.7rem);line-height:.98;letter-spacing:-4px}
+.gradient{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h2{font-size:clamp(1.25rem,2.6vw,2rem);margin:22px 0 14px;color:#ddd}
+.hero p{max-width:690px;color:var(--muted);font-size:1.05rem}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{padding:12px 18px;border-radius:12px;border:1px solid var(--line);font-weight:700;transition:.2s}
+.btn.primary{background:var(--grad);border:0}.btn:hover{transform:translateY(-2px)}
+.orb{width:300px;height:300px;border-radius:50%;margin:auto;background:
+radial-gradient(circle at 35% 30%,#fff 0 1%,transparent 2%),
+radial-gradient(circle at 60% 55%,rgba(236,72,153,.85),transparent 33%),
+radial-gradient(circle at 45% 45%,rgba(139,92,246,.9),transparent 58%);
+filter:blur(.2px);box-shadow:0 0 100px rgba(139,92,246,.35),inset 0 0 70px rgba(255,255,255,.08)}
+section{padding:90px 0}
+.section-head{margin-bottom:38px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:.75rem;color:#c4b5fd;font-weight:800}
+h2.section-title{font-size:2.4rem;margin-top:8px}.lead{color:var(--muted);max-width:760px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.card{background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:0 20px 50px rgba(0,0,0,.12)}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.info{padding:15px;border:1px solid var(--line);border-radius:14px;background:rgba(0,0,0,.12)}
+.info b{display:block;color:#fff;font-size:.85rem}.info span{color:var(--muted);font-size:.9rem}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.skill-group h3{margin-bottom:15px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{padding:7px 11px;border-radius:999px;background:#1a1d30;border:1px solid var(--line);font-size:.83rem;color:#d8dbea}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.project{position:relative;overflow:hidden}.project:before{content:"";position:absolute;inset:0 0 auto;height:3px;background:var(--grad)}
+.project h3{font-size:1.25rem;margin:12px 0 7px}.project p{color:var(--muted);font-size:.92rem}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin:17px 0}.tag{font-size:.72rem;padding:5px 8px;border-radius:7px;background:rgba(139,92,246,.1);color:#d8caff}
+.project ul{padding-left:18px;color:#b9bdcb;font-size:.9rem}.project li{margin:5px 0}
+.project-link{display:inline-block;margin-top:18px;color:#d8caff;font-weight:700;font-size:.88rem}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service h3{margin:10px 0}.service p{color:var(--muted);font-size:.9rem}
+.icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--grad);font-weight:900}
+.certs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.cert{padding:18px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.03)}
+.cert b{display:block}.cert span{color:var(--muted);font-size:.84rem}
+.goal{border:1px solid rgba(139,92,246,.25);background:linear-gradient(135deg,rgba(139,92,246,.12),rgba(236,72,153,.07));border-radius:25px;padding:40px}
+.goal p{font-size:1.15rem;color:#ddd;max-width:850px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact-item{display:flex;gap:14px;align-items:center;padding:17px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.03)}
+.contact-item small{display:block;color:var(--muted)}.contact-item strong{font-size:.9rem;overflow-wrap:anywhere}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);text-align:center;font-size:.85rem}
+@media(max-width:800px){
+ .hero-grid,.about,.projects,.contact{grid-template-columns:1fr}
+ .skills{grid-template-columns:1fr}.services,.certs{grid-template-columns:1fr}
+ .navlinks{display:none}.orb{width:220px;height:220px}
+ h1{letter-spacing:-2px}
+}
+</style>
+</head>
+<body>
+<nav><div class="container navin">
+  <a class="logo" href="#home">Kenzie<span>.</span></a>
+  <div class="navlinks">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+    <a href="#services">Services</a><a href="#contact">Contact</a>
+  </div>
+</div></nav>
+
+<main id="home">
+<section class="hero"><div class="container hero-grid">
+  <div>
+    <span class="badge">DATA • TECHNOLOGY • BUSINESS</span>
+    <h1>Kenzie<br><span class="gradient">Mohammed Ebrahim</span></h1>
+    <h2>Data Analyst • Data Scientist • Python Developer • SQL • Power BI</h2>
+    <p>I build data-focused solutions that turn raw information into clear analysis, useful dashboards, and practical business insights.</p>
+    <div class="actions">
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn" href="#contact">Contact Me</a>
+      <a class="btn" href="mailto:kenziemohamed10@gmail.com">Email Me</a>
+    </div>
+  </div>
+  <div class="orb" aria-label="Abstract data technology visual"></div>
+</div></section>
+
+<section id="about"><div class="container">
+  <div class="section-head"><div class="eyebrow">01 — About</div><h2 class="section-title">Turning data into insight.</h2>
+  <p class="lead">A developing data professional focused on analysis, visualization, databases, and practical technology skills.</p></div>
+  <div class="about">
+    <div class="card"><p>My work combines data analysis with programming and business-oriented thinking. I enjoy cleaning data, exploring patterns, building visualizations, and presenting results in a clear way.</p><p style="margin-top:14px;color:#b7bbca">I am continuously developing my technical skills through hands-on projects in Python, SQL, Excel, and Power BI.</p></div>
+    <div class="card"><div class="info-grid">
+      <div class="info"><b>Languages</b><span>Arabic — Native<br>English — B2</span></div>
+      <div class="info"><b>Core Focus</b><span>Data Analysis & Visualization</span></div>
+      <div class="info"><b>Tools</b><span>Python • SQL • Power BI • Excel</span></div>
+      <div class="info"><b>Strengths</b><span>Fast Learning • Attention to Detail • Problem Solving</span></div>
+    </div></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="container">
+ <div class="section-head"><div class="eyebrow">02 — Skills</div><h2 class="section-title">Technical toolkit.</h2></div>
+ <div class="skills">
+  <div class="card skill-group"><h3>Data Analytics</h3><div class="chips">
+   <span class="chip">Data Analysis — Advanced</span><span class="chip">Data Cleaning — Advanced</span><span class="chip">Data Visualization — Advanced</span><span class="chip">Statistics — Intermediate</span>
+  </div></div>
+  <div class="card skill-group"><h3>Programming & Data</h3><div class="chips">
+   <span class="chip">Python — Advanced</span><span class="chip">Pandas — Intermediate</span><span class="chip">NumPy — Intermediate</span><span class="chip">Matplotlib — Intermediate</span><span class="chip">Seaborn — Beginner</span><span class="chip">Machine Learning — Beginner</span>
+  </div></div>
+  <div class="card skill-group"><h3>BI & Databases</h3><div class="chips">
+   <span class="chip">Power BI — Advanced</span><span class="chip">SQL — Advanced</span><span class="chip">Excel — Intermediate</span><span class="chip">Microsoft Office — Intermediate</span>
+  </div></div>
+  <div class="card skill-group"><h3>Web & Development</h3><div class="chips">
+   <span class="chip">HTML — Intermediate</span><span class="chip">CSS — Beginner</span><span class="chip">Git / GitHub — Intermediate</span>
+  </div></div>
+ </div>
+</div></section>
+
+<section id="projects"><div class="container">
+ <div class="section-head"><div class="eyebrow">03 — Projects</div><h2 class="section-title">Selected work.</h2><p class="lead">Hands-on projects demonstrating data preparation, analysis, SQL querying, and business intelligence.</p></div>
+ <div class="projects">
+  <article class="card project"><h3>Python Superstore Data Analysis</h3>
+   <p>Exploratory data analysis project using the Superstore dataset, focusing on cleaning, KPIs, profitability, patterns, and visual reporting.</p>
+   <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">OOP</span></div>
+   <ul><li>Loaded and inspected the dataset.</li><li>Checked missing values and duplicates.</li><li>Performed exploratory analysis and KPI calculations.</li><li>Created reusable analysis functions and visualizations.</li></ul>
+   <a class="project-link" href="https://colab.research.google.com/drive/171opgKQG9jHNOxUS40YkCgz_eu2LXZqK?authuser=1#scrollTo=Q-3AlBPZ7fpG" target="_blank">Open Colab →</a>
+  </article>
+  <article class="card project"><h3>SQL Music Store Database Analysis</h3>
+   <p>Relational database analysis using the Chinook database to explore customers, sales, artists, tracks, genres, and country-level sales distribution.</p>
+   <div class="tags"><span class="tag">SQL</span><span class="tag">Joins</span><span class="tag">Aggregations</span><span class="tag">GROUP BY</span><span class="tag">Subqueries</span></div>
+   <ul><li>Worked with relational tables and keys.</li><li>Used joins and aggregations to answer business questions.</li><li>Analyzed customer spending and sales.</li><li>Identified top-performing genres and tracks.</li></ul>
+  </article>
+  <article class="card project"><h3>Pizza Sales Analysis Dashboard</h3>
+   <p>Power BI dashboard built from the supplied pizza sales project, exploring pizza quantities, prices, sizes, and sales by pizza type.</p>
+   <div class="tags"><span class="tag">Power BI</span><span class="tag">Data Visualization</span><span class="tag">KPI / Analysis</span><span class="tag">Interactive Dashboard</span></div>
+   <ul><li>Analyzed quantity by pizza name.</li><li>Compared total price across pizza types.</li><li>Explored pizza-size distribution.</li><li>Compared pizza types across sizes.</li><li>Used interactive filtering/drill interactions in the report.</li></ul>
+   <a class="project-link" href="kenzie-pizza.pbix">Project file →</a>
+  </article>
+  <article class="card project"><h3>Wuzzuf Job Market Analysis Dashboard</h3>
+   <p>Excel dashboard analyzing job-market trends, salary information, and frequently requested technical skills.</p>
+   <div class="tags"><span class="tag">Excel</span><span class="tag">Pivot Tables</span><span class="tag">Advanced Formulas</span><span class="tag">Charts</span></div>
+   <ul><li>Analyzed job trends and salary distributions.</li><li>Identified frequently requested technical skills.</li><li>Used Pivot Tables, formulas, and charts for reporting.</li></ul>
+  </article>
+ </div>
+</div></section>
+
+<section id="services"><div class="container">
+ <div class="section-head"><div class="eyebrow">04 — Services</div><h2 class="section-title">How I can help.</h2></div>
+ <div class="services">
+  <div class="card service"><div class="icon">DA</div><h3>Data Analysis</h3><p>Data cleaning, exploratory analysis, KPI analysis, and clear visual reporting using practical data-analysis workflows.</p></div>
+  <div class="card service"><div class="icon">PY</div><h3>Python</h3><p>Python-based data processing and analysis using Pandas, NumPy, Matplotlib, and related tools.</p></div>
+  <div class="card service"><div class="icon">SQL</div><h3>SQL Analysis</h3><p>Queries using filtering, joins, aggregations, GROUP BY, subqueries, and relational database concepts.</p></div>
+  <div class="card service"><div class="icon">BI</div><h3>Power BI</h3><p>Interactive dashboards and visual reports designed to communicate KPIs, trends, and business insights.</p></div>
+  <div class="card service"><div class="icon">EX</div><h3>Excel</h3><p>Data organization, cleaning, Pivot Tables, formulas, charts, and dashboard-style reporting.</p></div>
+  <div class="card service"><div class="icon">DE</div><h3>Data Entry</h3><p>Accurate and organized data-entry work with attention to detail and structured information.</p></div>
+ </div>
+</div></section>
+
+<section><div class="container">
+ <div class="section-head"><div class="eyebrow">05 — Training & Certifications</div><h2 class="section-title">Continuous learning.</h2></div>
+ <div class="certs">
+  <div class="cert"><b>Data Fundamentals</b><span>IBM SkillsBuild</span></div>
+  <div class="cert"><b>Explore Emerging Tech</b><span>IBM SkillsBuild</span></div>
+  <div class="cert"><b>Open-Source Origin Stories</b><span>IBM SkillsBuild — Hybrid Cloud, AI Ethics & Open Source Technologies</span></div>
+  <div class="cert"><b>The Librarian: Master of Vast Data Treasures</b><span>IBM SkillsBuild</span></div>
+  <div class="cert"><b>The Advocate: Protector of AI Ethical Values</b><span>IBM SkillsBuild</span></div>
+  <div class="cert"><b>The Paladin: Defender of Open-Source Freedom</b><span>IBM SkillsBuild</span></div>
+  <div class="cert"><b>Digital Egypt / Ashbal Misr — Level 2</b><span>Programming training</span></div>
+  <div class="cert"><b>Professional Development — Soft Skills</b><span>UCCD — University Center for Career Development</span></div>
+ </div>
+</div></section>
+
+<section><div class="container"><div class="goal">
+ <div class="eyebrow">06 — Career Goal</div><h2 class="section-title">Building a strong future in data.</h2>
+ <p>My goal is to grow into a successful data professional and businesswoman by gaining practical experience, strengthening my analytical and technical skills, and using data and technology to support better business decisions.</p>
+</div></div></section>
+
+<section id="contact"><div class="container">
+ <div class="section-head"><div class="eyebrow">07 — Contact</div><h2 class="section-title">Let's connect.</h2><p class="lead">Open to professional opportunities, freelance projects, collaboration, and learning experiences.</p></div>
+ <div class="contact">
+  <a class="contact-item" href="mailto:kenziemohamed10@gmail.com"><div class="icon">@</div><div><small>Email</small><strong>kenziemohamed10@gmail.com</strong></div></a>
+  <a class="contact-item" href="https://www.linkedin.com/in/kenzie-mohamed" target="_blank"><div class="icon">in</div><div><small>LinkedIn</small><strong>linkedin.com/in/kenzie-mohamed</strong></div></a>
+  <a class="contact-item" href="https://baaeed.com/u/Kenzie_123" target="_blank"><div class="icon">B</div><div><small>Ba3eed</small><strong>Freelance Profile</strong></div></a>
+  <a class="contact-item" href="https://www.freelancer.com/u/kanozm" target="_blank"><div class="icon">F</div><div><small>Freelancer</small><strong>Freelance Profile</strong></div></a>
+  <a class="contact-item" href="https://nafezly.com/portfolio/246793-excel---data-entry" target="_blank"><div class="icon">N</div><div><small>Nafedhly</small><strong>Portfolio / Service</strong></div></a>
+  <a class="contact-item" href="https://share.google/wPHvaKVYZ7VN0b0j9" target="_blank"><div class="icon">GH</div><div><small>GitHub link</small><strong>Open Profile</strong></div></a>
+ </div>
+</div></section>
+</main>
+<footer>© 2026 Kenzie Mohammed Ebrahim — Data & Technology Portfolio</footer>
+</body>
+</html>
